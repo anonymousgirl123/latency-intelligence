@@ -15,12 +15,12 @@ A **Go-based observability backend** that transforms raw OpenTelemetry distribut
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                        External Clients                         │
-│  ☕ Instrumented App   🔌 IntelliJ Plugin   ⚙️ CI Pipeline      │
+│   Instrumented App    IntelliJ Plugin    CI Pipeline      │
 └──────┬──────────────────────┬───────────────────────┬──────────┘
        │ OTLP/gRPC :4317      │ GET /calibrate        │ POST /regression
        │ OTLP/HTTP :4318      │ GET /hotspots         │ POST /webhook/ci
@@ -53,7 +53,7 @@ A **Go-based observability backend** that transforms raw OpenTelemetry distribut
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 latency-intelligence/
@@ -84,7 +84,7 @@ latency-intelligence/
 
 ---
 
-## 🚦 API Reference
+##  API Reference
 
 ### `GET /health`
 Liveness check.
@@ -264,7 +264,7 @@ go run ./cmd/server
 
 ---
 
-## ⚙️ Configuration
+##  Configuration
 
 All settings are read from environment variables (or a `.env` file at the project root).
 
@@ -283,7 +283,7 @@ All settings are read from environment variables (or a `.env` file at the projec
 
 ---
 
-## 🗄️ Data Storage
+##  Data Storage
 
 ### ClickHouse Tables
 
@@ -328,7 +328,7 @@ TTL hour + INTERVAL 365 DAY
 
 ---
 
-## 🔬 Regression Detection Logic
+##  Regression Detection Logic
 
 ```
 Δp99      = candidate_p99 - baseline_p99
@@ -342,7 +342,7 @@ IsRegression = Δp99 (%) > REGRESSION_THRESHOLD_PCT
 
 ---
 
-## 🔌 OpenTelemetry Integration
+##  OpenTelemetry Integration
 
 Your app can send traces **directly** to the service on `:4317` (gRPC) or route through the bundled OpenTelemetry Collector.
 
@@ -370,7 +370,7 @@ otel.resource.attributes=deployment.environment=staging,git.commit.sha=${GIT_COM
 
 ---
 
-## 🧰 Tech Stack
+##  Tech Stack
 
 | Component | Technology |
 |---|---|
@@ -384,7 +384,7 @@ otel.resource.attributes=deployment.environment=staging,git.commit.sha=${GIT_COM
 
 ---
 
-## 🗺️ Roadmap
+##  Roadmap
 
 - [ ] Redis caching for hot method→p99 lookups
 - [ ] Materialized view auto-population from `spans` table
@@ -394,7 +394,7 @@ otel.resource.attributes=deployment.environment=staging,git.commit.sha=${GIT_COM
 
 ---
 
-## 📄 License
+##  License
 
 MIT
 
