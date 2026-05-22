@@ -228,7 +228,7 @@ Identical to `POST /regression` — a dedicated path for CI pipeline webhook int
 ### 1. Clone & configure
 
 ```bash
-git clone https://github.com/kamini/latency-intelligence.git
+git clone https://github.com/anonymousgirl123/latency-intelligence.git
 cd latency-intelligence
 cp .env.example .env
 # Edit .env as needed
@@ -397,7 +397,3 @@ otel.resource.attributes=deployment.environment=staging,git.commit.sha=${GIT_COM
 ##  License
 
 MIT
-
----
-
-🌀 Magic applied with [Wibey VS Code Extension](https://wibey.walmart.com/code) 🪄
