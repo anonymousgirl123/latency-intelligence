@@ -1,17 +1,17 @@
-# 🚀 Latency Intelligence Platform
+# Latency Intelligence Platform
 
 A **Go-based observability backend** that transforms raw OpenTelemetry distributed traces into actionable latency intelligence — powering real-time p99 data in your IDE and automated regression gates in your CI/CD pipeline.
 
 ---
 
-## ✨ Features
+## Features
 
-- 📡 **OTLP gRPC Receiver** — ingests spans directly from any OpenTelemetry-compatible app or Collector
-- 📊 **Percentile Analytics** — computes p50 / p95 / p99 latency per method using ClickHouse `quantile()`
-- 🔍 **Hotspot Detection** — surfaces the top-N slowest methods across any service and environment
-- ⚠️ **Regression Detection** — compares p99 between two commits and fails CI with HTTP 422 on regression
-- 🔌 **IDE Integration** — REST endpoints consumed by the companion IntelliJ plugin for inline latency hints
-- 🐳 **Docker-first** — single `docker compose up` spins up the full stack
+-  **OTLP gRPC Receiver** — ingests spans directly from any OpenTelemetry-compatible app or Collector
+-  **Percentile Analytics** — computes p50 / p95 / p99 latency per method using ClickHouse `quantile()`
+-  **Hotspot Detection** — surfaces the top-N slowest methods across any service and environment
+-  **Regression Detection** — compares p99 between two commits and fails CI with HTTP 422 on regression
+-  **IDE Integration** — REST endpoints consumed by the companion IntelliJ plugin for inline latency hints
+-  **Docker-first** — single `docker compose up` spins up the full stack
 
 ---
 
